@@ -1,0 +1,12 @@
+# logs
+*.log
+*.debug
+
+# build directory
+public
+
+# dependencies
+node_modules
+
+.DS_Store
+env.json

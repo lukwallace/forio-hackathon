@@ -1,0 +1,19 @@
+#app {
+    padding: 1rem;
+    form {
+        display: flex;
+        flex-flow: column nowrap;
+        transition: opacity 0.25s;
+    }
+    textarea.input {
+        height: calc(100vw * 0.35);
+        margin-bottom: 1rem;
+    }
+    button {
+        align-self: flex-end;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
