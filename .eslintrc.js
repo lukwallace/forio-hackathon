@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = {
-    "globals": {
-        "F": true,
+    'globals': {
+        'F': true,
         'Contour': true,
+        'd3': true,  
     },
     'parser': 'babel-eslint',
     'parserOptions': {

@@ -1,5 +1,7 @@
 #app {
-    padding: 1rem;
+    padding: 0 1rem;
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+
     form {
         display: flex;
         flex-flow: column nowrap;
@@ -11,9 +13,67 @@
     }
     button {
         align-self: flex-end;
+        background: #2477b3;
+        color: white;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 }
 
-.hidden {
-    opacity: 0;
+.line-chart {
+    .series path.line {
+        stroke: gray;
+    }
+}
+
+h1 {
+    padding: 1rem 0;
+    margin: 0;
+}
+
+form.input-submission,
+div.results-wrapper {
+    height: 100vh;
+}
+
+div.results-wrapper {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows: auto 15rem 1fr;
+
+    h1,
+    .line-chart {
+       grid-column-start: span 3; 
+    }
+
+    .line-chart {
+        margin-bottom: 1rem;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    .current {
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+    .current.hidden {
+        opacity: 0;
+    }
+    .speaker {
+        margin: 0 1rem;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+    .sentiment {
+        min-height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
 }
