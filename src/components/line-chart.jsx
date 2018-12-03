@@ -81,6 +81,15 @@ class LineChart extends Component {
             .render();
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.data.length !== this.props.data.length) {
+            this.chart.setData([{
+                name: 'series-name',
+                data: parse(this.props.data),
+            }]).render();
+        }
+    }
+
     render() {
         const { name } = this.props;
         return <div id={name} className="line-chart"></div>;
